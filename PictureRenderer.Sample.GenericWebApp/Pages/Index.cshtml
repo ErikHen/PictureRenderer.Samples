@@ -1,0 +1,11 @@
+﻿@page
+@using global::GenericWebApp
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @Html.Raw(PictureRenderer.Picture.Render("/test.jpg?quality=70", PictureProfiles.SampleImage, "alt text", LazyLoading.Browser, focalPoint: (0.3, 0.4)))
+</div>

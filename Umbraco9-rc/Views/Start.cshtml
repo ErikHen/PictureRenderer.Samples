@@ -1,0 +1,27 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.PropertyEditors.ValueConverters
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using PictureRenderer.Umbraco
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Start>
+
+@{
+    Layout = null;
+    // var image = Model.Value<IPublishedContent>("image1");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    Hello<br />
+    @((Model.Value<Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue>("imageCropperTest")).FocalPoint.Left)
+    <br />
+    @UmbracoPicture.Render(Model.Value<ImageCropperValue>("imageCropperTest"), PictureProfiles.SampleImage)
+
+@* @Html.Raw(Picture.Render(Model.Value("imageCropperTest").ToString(), PictureProfiles.SampleImage))*@
+
+</body>
+</html>

@@ -5,7 +5,7 @@ using  Umbraco.Cms.Core.PublishedCache;
 using  Umbraco.Cms.Infrastructure.ModelsBuilder;
 using  Umbraco.Cms.Core;
 using  Umbraco.Extensions;
-[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "ed77ef0cc3c338c0b90dcdc023faad5f45eeabdc")]
+[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "073d79f286e4c83acf04ef2a82d9db9ddfcee7e3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -144,6 +144,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Alt Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-rc002+dba385e5e52ee5a0dafd48f687e8d8254b3a633a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pictureAltText")]
+		public virtual string PictureAltText => this.Value<string>(_publishedValueFallback, "pictureAltText");
 
 		///<summary>
 		/// Size: in bytes

@@ -1,12 +1,11 @@
-@using Umbraco.Cms.Web.Common.PublishedModels;
 @using Umbraco.Cms.Core.PropertyEditors.ValueConverters
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @using PictureRenderer.Umbraco
+@using Umbraco.Cms.Core.Models
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Start>
 
 @{
     Layout = null;
-    // var image = Model.Value<IPublishedContent>("image1");
 }
 
 <!DOCTYPE html>
@@ -17,11 +16,12 @@
 </head>
 <body>
     Hello<br />
-    @((Model.Value<Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue>("imageCropperTest")).FocalPoint.Left)
+    @Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage)
     <br />
-    @UmbracoPicture.Render(Model.Value<ImageCropperValue>("imageCropperTest"), PictureProfiles.SampleImage)
+    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage)
+    <br />
+    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage, "Some alt text")
 
-@* @Html.Raw(Picture.Render(Model.Value("imageCropperTest").ToString(), PictureProfiles.SampleImage))*@
 
 </body>
 </html>

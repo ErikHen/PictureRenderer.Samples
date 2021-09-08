@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericWebApp", "PictureRen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco9-rc", "Umbraco9-rc\Umbraco9-rc.csproj", "{CC546505-FE36-4ABE-8D98-A3A8275C202B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureRendererUmbraco", "PictureRenderer.Umbraco\PictureRendererUmbraco.csproj", "{2D1BE0EB-4CFB-49E0-BC52-A692DF8C9F59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PictureRenderer.Umbraco", "..\PR\PictureRenderer.Umbraco\PictureRenderer.Umbraco.csproj", "{7EE190D3-3310-466A-96EC-3613C316C459}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{CC546505-FE36-4ABE-8D98-A3A8275C202B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC546505-FE36-4ABE-8D98-A3A8275C202B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC546505-FE36-4ABE-8D98-A3A8275C202B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D1BE0EB-4CFB-49E0-BC52-A692DF8C9F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D1BE0EB-4CFB-49E0-BC52-A692DF8C9F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D1BE0EB-4CFB-49E0-BC52-A692DF8C9F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D1BE0EB-4CFB-49E0-BC52-A692DF8C9F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE190D3-3310-466A-96EC-3613C316C459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE190D3-3310-466A-96EC-3613C316C459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE190D3-3310-466A-96EC-3613C316C459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE190D3-3310-466A-96EC-3613C316C459}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

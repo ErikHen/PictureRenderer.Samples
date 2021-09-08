@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+/PictureRenderer.Sample.GenericWebApp/wwwroot/is-cache
+/Umbraco9-rc/umbraco/mediacache
+/Umbraco9-rc/umbraco/Data/TEMP

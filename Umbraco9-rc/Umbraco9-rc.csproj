@@ -44,7 +44,7 @@
         <None Remove="umbraco\MediaCache\**" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\PictureRenderer.Umbraco\PictureRendererUmbraco.csproj" />
+      <ProjectReference Include="..\..\PR\PictureRenderer.Umbraco\PictureRenderer.Umbraco.csproj" />
     </ItemGroup>
 
     <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->

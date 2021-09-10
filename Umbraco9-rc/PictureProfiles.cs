@@ -5,7 +5,7 @@ namespace Umbraco9_rc
 {
     public static class PictureProfiles
     {
-       
+
         public static ImageSharpProfile SampleImage =
             new()
             {

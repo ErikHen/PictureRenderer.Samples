@@ -1,0 +1,31 @@
+
+@model OptimizelyCMS.ViewModels.IPageViewModel<OptimizelyCMS.Models.SitePageData>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="@(Model.CurrentPage.Language)">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@Model.CurrentPage.MetaTitle</title>
+        <base href="/" />
+        @if (Model.CurrentPage.MetaKeywords != null && Model.CurrentPage.MetaKeywords.Count > 0)
+        {
+            <meta name="keywords" content="@string.Join(",", Model.CurrentPage.MetaKeywords)" />
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.CurrentPage.MetaDescription))
+        {
+            <meta name="description" content="@Model.CurrentPage.MetaDescription" />
+        }
+        @Html.CanonicalLink()
+        @Html.AlternateLinks()
+    </head>
+    <body>
+        @await Html.RenderEPiServerQuickNavigatorAsync()
+        @Model.CurrentPage.Name
+
+    </body>
+</html>

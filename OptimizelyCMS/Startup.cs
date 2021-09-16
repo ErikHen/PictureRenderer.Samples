@@ -1,4 +1,5 @@
-﻿using EPiServer.Cms.UI.AspNetIdentity;
+﻿using Baaijte.Optimizely.ImageSharp.Web;
+using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Web;
 using EPiServer.Web.Routing;
 using Microsoft.AspNetCore.Builder;
@@ -21,6 +22,8 @@ namespace OptimizelyCMS
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddBaaijteOptimizelyImageSharp();
+
             if (_webHostingEnvironment.IsDevelopment())
             {
                 //Add development configuration
@@ -47,6 +50,7 @@ namespace OptimizelyCMS
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseBaaijteOptimizelyImageSharp();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthentication();

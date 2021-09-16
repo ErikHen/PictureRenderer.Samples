@@ -1,5 +1,7 @@
 
-@model OptimizelyCMS.ViewModels.IPageViewModel<OptimizelyCMS.Models.SitePageData>
+@using PictureRenderer.Optimizely
+@using OptimizelyCMS.Models
+@model OptimizelyCMS.ViewModels.IPageViewModel<OptimizelyCMS.Models.StartPage>
 
 @{
     Layout = null;
@@ -26,6 +28,8 @@
     <body>
         @await Html.RenderEPiServerQuickNavigatorAsync()
         @Model.CurrentPage.Name
+    
+        @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.TopHeroImage)
 
     </body>
 </html>

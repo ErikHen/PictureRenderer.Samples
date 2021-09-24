@@ -13,50 +13,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style></style>
 </head>
 <body>
-    Hello Pictures!
-    <table>
-        <tr>
+    Hello<br />
+    @Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage)
+    <br />
+    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage)
+    <br />
+    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage, "Some alt text")
 
-            <td>@Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage)</td>
-            <td>
-                The picture element code
-                <pre>@FormatPictureCode(Html.Picture((MediaWithCrops) Model.Image1, PictureProfiles.SampleImage).ToString())</pre>
-            </td>
-        </tr>
-
-        <tr>
-            <td>@Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.Thumbnail)</td>
-            <td>
-                The picture element code
-                <pre>@FormatPictureCode(Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.Thumbnail).ToString())</pre>
-            </td>
-        </tr>
-
-        <tr>
-            <td>@Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.Thumbnail, "Some alt text")</td>
-            <td>
-                The picture element code
-                <pre>@FormatPictureCode(Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.Thumbnail, "Some alt text").ToString())</pre>
-            </td>
-        </tr>
-    </table>
 
 </body>
 </html>
-
-@functions {
-    // just formatting the picture element to make it easier to read.
-    string FormatPictureCode(string code)
-    {
-        return code
-            .Replace("<picture>", "<picture>\n")
-            .Replace("srcset=\"", "srcset=\"\n ")
-            .Replace(", /", ",\n /")
-            .Replace(" sizes=", "\n sizes=")
-            .Replace("<img", "\n<img")
-            .Replace("</picture>", "\n</picture>");
-    }
-}

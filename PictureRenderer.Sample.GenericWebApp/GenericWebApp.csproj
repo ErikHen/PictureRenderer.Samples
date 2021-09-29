@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PictureRenderer" Version="1.1.0-preview" />
+    <PackageReference Include="PictureRenderer" Version="1.2.1" />
     <PackageReference Include="SixLabors.ImageSharp.Web" Version="1.0.3" />
   </ItemGroup>
 

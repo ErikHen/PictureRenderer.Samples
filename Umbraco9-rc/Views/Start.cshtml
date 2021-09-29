@@ -15,13 +15,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    Hello<br />
-    @Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage)
-    <br />
-    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage)
-    <br />
-    @Html.Picture((ImageCropperValue)Model.ImageCropperTest, PictureProfiles.SampleImage, "Some alt text")
+Hello Pictures!
+    <table>
+        <tr>
+            <td>
+                @* Casting to MediaWithCrops is not necessary, it just gives Visual Studio a hint. *@
+                @Html.Picture((MediaWithCrops) Model.Image1, PictureProfiles.SampleImage)
+            </td>
+            <td>
+                <pre>@FormatElement(Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage).ToString())</pre>
+            </td>
+        </tr>
 
-
+        <tr>
+            <td>
+               
+                @Html.Picture(Model.Image2, PictureProfiles.Thumbnail)
+            </td>
+            <td>
+                <pre>@FormatElement(Html.Picture(Model.Image2, PictureProfiles.Thumbnail).ToString())</pre>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                @Html.Picture(Model.ImageCropperTest, PictureProfiles.Thumbnail)
+            </td>
+            <td>
+                <pre>@FormatElement(Html.Picture(Model.ImageCropperTest, PictureProfiles.Thumbnail).ToString())</pre>
+            </td>
+        </tr>
+    </table>
+    
 </body>
 </html>
+
+@functions
+{
+    //just adding line-breaks to make it more readable
+    string FormatElement(string element)
+    {
+        return element
+            .Replace("<picture>", "<picture>\n")
+            .Replace("</picture>", "\n</picture>")
+            .Replace("srcset=\"", "srcset=\"\n ")
+            .Replace(", /", ",\n /")
+            .Replace(" sizes=", "\n sizes=")
+            .Replace("<img", "\n<img")
+
+        ;
+    }
+}

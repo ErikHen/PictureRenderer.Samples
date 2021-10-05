@@ -27,9 +27,43 @@
     </head>
     <body>
         @await Html.RenderEPiServerQuickNavigatorAsync()
-        @Model.CurrentPage.Name
-    
-        @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.TopHeroImage)
+        Hello Pictures!
+        <table>
+            <tr>
+                <td>
+                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage)
+                </td>
+                <td>
+                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage).ToString())</pre>
+                </td>
+            </tr>
 
-    </body>
+            <tr>
+                <td>
+                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail)
+                </td>
+                <td>
+                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
+                </td>
+            </tr>
+    </table>
+    
+</body>
 </html>
+
+@functions
+{
+    //just adding line-breaks to make it more readable
+    string FormatElement(string element)
+    {
+        return element
+            .Replace("<picture>", "<picture>\n")
+            .Replace("</picture>", "\n</picture>")
+            .Replace("srcset=\"", "srcset=\"\n ")
+            .Replace(", /", ",\n /")
+            .Replace(" sizes=", "\n sizes=")
+            .Replace("<img", "\n<img")
+
+            ;
+    }
+}

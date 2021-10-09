@@ -1,8 +1,11 @@
 # PictureRenderer samples
 Sample code showing how to use [PictureRenderer](https://github.com/ErikHen/PictureRenderer).
 
-[Basic ASP.Net web app sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/master/PictureRenderer.Sample.GenericWebApp)
+[Basic ASP.Net web app sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/main/PictureRenderer.Sample.GenericWebApp)
 
-[Umbraco CMS 9 sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/master/Umbraco9-rc)
+[Blazor sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/main/Blazor)
 
-[Blazor sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/master/Blazor)
+[Optimizely CMS 12 sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/main/OptimizelyCMS)
+
+[Umbraco CMS 9 sample](https://github.com/ErikHen/PictureRenderer.Samples/tree/main/Umbraco9-rc)
+

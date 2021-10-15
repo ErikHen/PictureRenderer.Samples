@@ -12,9 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="C:\Users\erik.NMESTER\.nuget\packages\imagepointeditor\2.0.0-preview5\contentFiles\any\net5.0\modules\_protected\ImagePointEditor\ImagePointEditor.zip" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>

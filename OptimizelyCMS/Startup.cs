@@ -2,6 +2,7 @@
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Web;
 using EPiServer.Web.Routing;
+using ImagePointEditor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +24,7 @@ namespace OptimizelyCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddBaaijteOptimizelyImageSharp();
+            services.AddImagePointEditor();
 
             if (_webHostingEnvironment.IsDevelopment())
             {

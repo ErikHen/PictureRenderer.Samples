@@ -3,6 +3,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Framework.DataAnnotations;
+using ImagePointEditor;
 
 namespace OptimizelyCMS.Models.Media
 {
@@ -12,5 +13,9 @@ namespace OptimizelyCMS.Models.Media
     {
         [Display(Name = "Alt text", Order = 10)]
         public virtual string AltText { get; set; }
+
+        [UIHint(ImagePoint.UIHint)]
+        [Display(Name = "Focal point")]
+        public virtual string ImageFocalPoint { get; set; }
     }
 }

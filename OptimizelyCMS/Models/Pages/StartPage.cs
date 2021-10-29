@@ -12,7 +12,10 @@ namespace OptimizelyCMS.Models
 
         [Display(GroupName = SystemTabNames.Content, Order = 100)]
         [UIHint(UIHint.Image)]
-        public virtual ContentReference TestImage1 { get; set; } 
+        public virtual ContentReference TestImage1 { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content, Order = 110)]
+        public virtual XhtmlString SomeRichText { get; set; }
 
 
         [Display(GroupName = SystemTabNames.Content, Order = 320)]

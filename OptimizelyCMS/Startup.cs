@@ -25,6 +25,7 @@ namespace OptimizelyCMS
         {
             services.AddBaaijteOptimizelyImageSharp();
             services.AddImagePointEditor();
+            services.AddTinyMceConfiguration();
 
             if (_webHostingEnvironment.IsDevelopment())
             {

@@ -48,7 +48,9 @@
             </tr>
         </table>
 
-        @{Html.RenderXhtmlString(Model.CurrentPage.SomeRichText.AddPictureRenderer(width: 400));}
+    @{Html.RenderXhtmlString(Model.CurrentPage.SomeRichText.AddResize());}
+    
+    @Html.PropertyFor(x => x.CurrentPage.SomeRichText)
     </body>
 </html>
 

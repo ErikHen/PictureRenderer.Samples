@@ -12,18 +12,6 @@ namespace OptimizelyCMS
     {
         public static IServiceCollection AddTinyMceConfiguration(this IServiceCollection services)
         {
-            //services.Configure<TinyMceConfiguration>(config =>
-            //{
-            //    config.Default()
-            //        .AddEpiserverSupport()
-            //        .Toolbar("styleselect")
-            //        //.StyleFormats(
-            //        //    new { title = "Image test 1", classes = "image-test1", block = "img" }
-            //        //)
-            //        ;
-            //});
-            //return services;
-
             services.Configure<TinyMceConfiguration>(config =>
             {
                 config.For<StartPage>(t => t.SomeRichText)
@@ -31,8 +19,9 @@ namespace OptimizelyCMS
                     .AddPlugin(DefaultValues.EpiserverPlugins + " " + DefaultValues.TinyMcePlugins)
                     .Toolbar(DefaultValues.Toolbar + " styleselect")
                     .StyleFormats(
-                        new { title = "Image test 1", classes = "image-test1", inline="img"}
+                        new { title = "Image test 4", classes = "image-test1", selector = "img" }
                     )
+                    .Height(400)
                 ;
             });
             return services;

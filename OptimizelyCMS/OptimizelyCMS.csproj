@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\**" />
     <Compile Remove="_Database\**" />
+    <Content Remove="wwwroot\**" />
     <Content Remove="_Database\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
     <EmbeddedResource Remove="_Database\**" />
+    <None Remove="wwwroot\**" />
     <None Remove="_Database\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\DefaultPage.cshtml" />

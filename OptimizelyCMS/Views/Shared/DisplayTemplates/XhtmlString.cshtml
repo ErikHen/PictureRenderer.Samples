@@ -1,0 +1,10 @@
+﻿@using EPiServer.Core
+@using PictureRenderer.Optimizely
+
+@model XhtmlString
+
+@{
+    if (Model == null) { return; };
+}
+
+@{Html.RenderXhtmlString(Model.RenderImageAsPicture());}

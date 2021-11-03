@@ -23,7 +23,7 @@ namespace GenericWebApp
         public static readonly ImageSharpProfile TopHero = new()
         {
             SrcSetWidths = new[] { 1024, 1366, 1536, 1920 },
-            SrcSetSizes = new[] { "100vw" },
+            Sizes = new[] { "100vw" },
             AspectRatio = 2
         };
 

@@ -15,7 +15,7 @@ namespace Umbraco9_rc
         public static readonly ImageSharpProfile SampleImage = new() 
             {
                 SrcSetWidths = new[] { 320, 640, 750, 1500 },
-                SrcSetSizes = new[] { "(max-width: 640px) 100vw", "(max-width: 1200px) 320px", "750px" },
+                Sizes = new[] { "(max-width: 640px) 100vw", "(max-width: 1200px) 320px", "750px" },
                 AspectRatio = 1.777 // 16:9 = 16/9 = 1.777
             };
 
@@ -24,8 +24,9 @@ namespace Umbraco9_rc
         public static readonly ImageSharpProfile TopHero = new()
             {
                 SrcSetWidths = new[] { 1024, 1366, 1536, 1920 },
-                SrcSetSizes = new[] { "100vw" },
-                AspectRatio = 2
+                Sizes = new[] { "100vw" },
+                AspectRatio = 2,
+                ImgWidthHeight = true
             };
 
         // Thumbnail
@@ -33,7 +34,7 @@ namespace Umbraco9_rc
         public static readonly ImageSharpProfile Thumbnail = new()
             {
                 SrcSetWidths = new[] { 150, 300 },
-                SrcSetSizes = new[] { "150px" },
+                Sizes = new[] { "150px" },
                 AspectRatio = 1  //square image (equal height and width).
             };
     }

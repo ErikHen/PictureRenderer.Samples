@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="PictureRenderer.Umbraco" Version="1.2.0" />
         <PackageReference Include="Umbraco.Cms" Version="9.0.0" />
         <PackageReference Include="Umbraco.Cms.SqlCe" Version="9.0.0" />
         <PackageReference Include="Umbraco.SqlServerCE" Version="4.0.0.1" />

@@ -20,7 +20,7 @@ Hello Pictures!
         <tr>
             <td>
                 @* Casting to MediaWithCrops is not necessary, it just gives Visual Studio a hint. *@
-                @Html.Picture((MediaWithCrops) Model.Image1, PictureProfiles.SampleImage)
+                @Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage)
             </td>
             <td>
                 <pre>@FormatElement(Html.Picture((MediaWithCrops)Model.Image1, PictureProfiles.SampleImage).ToString())</pre>
@@ -29,20 +29,29 @@ Hello Pictures!
 
         <tr>
             <td>
-               
+
                 @Html.Picture(Model.Image2, PictureProfiles.Thumbnail)
             </td>
             <td>
                 <pre>@FormatElement(Html.Picture(Model.Image2, PictureProfiles.Thumbnail).ToString())</pre>
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 @Html.Picture(Model.ImageCropperTest, PictureProfiles.Thumbnail)
             </td>
             <td>
                 <pre>@FormatElement(Html.Picture(Model.ImageCropperTest, PictureProfiles.Thumbnail).ToString())</pre>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.Picture(Model.Image2, PictureProfiles.TopHero)
+            </td>
+            <td>
+                <pre>@FormatElement(Html.Picture(Model.Image2, PictureProfiles.TopHero).ToString())</pre>
             </td>
         </tr>
     </table>
@@ -60,7 +69,7 @@ Hello Pictures!
             .Replace("</picture>", "\n</picture>")
             .Replace("srcset=\"", "srcset=\"\n ")
             .Replace(", /", ",\n /")
-            .Replace(" sizes=", "\n sizes=")
+            .Replace("sizes=", "\n sizes=")
             .Replace("<img", "\n<img")
 
         ;

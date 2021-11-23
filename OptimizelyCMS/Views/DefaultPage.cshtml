@@ -46,9 +46,12 @@
                     <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
                 </td>
             </tr>
-    </table>
+        </table>
+
+    @*@{Html.RenderXhtmlString(Model.CurrentPage.SomeRichText.AddResize());}*@
     
-</body>
+    @Html.PropertyFor(x => x.CurrentPage.SomeRichText)
+    </body>
 </html>
 
 @functions

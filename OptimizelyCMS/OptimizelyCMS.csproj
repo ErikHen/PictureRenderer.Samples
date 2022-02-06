@@ -11,7 +11,7 @@
     <None Remove="_Database\**" />
   </ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
@@ -21,7 +21,7 @@
   <ItemGroup>
     <PackageReference Include="Baaijte.Optimizely.ImageSharp.Web" Version="1.0.0" />
     <PackageReference Include="EPiServer.CMS" Version="12.0.2" />
-    <PackageReference Include="ImagePointEditor" Version="2.0.1" />
-    <PackageReference Include="PictureRenderer.Optimizely" Version="1.1.0" />
+    <PackageReference Include="ImagePointEditor" Version="2.0.2" />
+    <PackageReference Include="PictureRenderer.Optimizely" Version="1.1.1" />
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@
     <None Include="Views\_ViewImports.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Baaijte.Optimizely.ImageSharp.Web" Version="1.0.0" />
+    <PackageReference Include="Baaijte.Optimizely.ImageSharp.Web" Version="1.0.6" />
     <PackageReference Include="EPiServer.CMS" Version="12.0.2" />
     <PackageReference Include="ImagePointEditor" Version="2.0.2" />
     <PackageReference Include="PictureRenderer.Optimizely" Version="1.1.1" />

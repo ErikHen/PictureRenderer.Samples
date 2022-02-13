@@ -9,11 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.0-alpha.0.14" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\PR\PictureRenderer\PictureRenderer\PictureRenderer.csproj" />
+    <PackageReference Include="PictureRenderer" Version="2.0.0" />
+    <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.0-alpha.0.18" />
   </ItemGroup>
 
 </Project>

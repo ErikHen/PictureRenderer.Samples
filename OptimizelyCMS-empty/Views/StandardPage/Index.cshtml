@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@*@using PictureRenderer.Optimizely*@
+@using EPiServer.Web.Mvc.Html
+@using OptimizelyCMS_empty.Models
+@model OptimizelyCMS_empty.Models.Pages.StandardPage
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="@(Model.Language)">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <base href="/" />
+       @* @if (Model.CurrentPage.MetaKeywords != null && Model.CurrentPage.MetaKeywords.Count > 0)
+        {
+            <meta name="keywords" content="@string.Join(",", Model.CurrentPage.MetaKeywords)" />
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.CurrentPage.MetaDescription))
+        {
+            <meta name="description" content="@Model.CurrentPage.MetaDescription" />
+        }
+        @Html.CanonicalLink()
+        @Html.AlternateLinks()*@
+    </head>
+    <body>
+        @await Html.RenderEPiServerQuickNavigatorAsync()
+        Hello Pictures!
+        @*<table>
+            <tr>
+                <td>
+                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage)
+                </td>
+                <td>
+                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage).ToString())</pre>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail)
+                </td>
+                <td>
+                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
+                </td>
+            </tr>
+        </table>*@
+
+    @*@{Html.RenderXhtmlString(Model.CurrentPage.SomeRichText.AddResize());}*@
+    
+    @*@Html.PropertyFor(x => x.CurrentPage.SomeRichText)*@
+    </body>
+</html>
+
+@functions
+{
+    //just adding line-breaks to make it more readable
+    string FormatElement(string element)
+    {
+        return element
+            .Replace("<picture>", "<picture>\n")
+            .Replace("</picture>", "\n</picture>")
+            .Replace("srcset=\"", "srcset=\"\n ")
+            .Replace(", /", ",\n /")
+            .Replace(" sizes=", "\n sizes=")
+            .Replace("<img", "\n<img")
+
+            ;
+    }
+}

@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Baaijte.Optimizely.ImageSharp.Web;
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
@@ -23,6 +24,8 @@ namespace OptimizelyCMS_empty
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddBaaijteOptimizelyImageSharp();
+
             if (_webHostingEnvironment.IsDevelopment())
             {
                 AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(_webHostingEnvironment.ContentRootPath, "App_Data"));
@@ -35,6 +38,8 @@ namespace OptimizelyCMS_empty
                 .AddCms()
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
+
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,6 +48,9 @@ namespace OptimizelyCMS_empty
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //app.UseBaaijteOptimizelyImageSharp();
+
 
             app.UseStaticFiles();
             app.UseRouting();
@@ -53,6 +61,7 @@ namespace OptimizelyCMS_empty
             {
                 endpoints.MapContent();
             });
+
         }
     }
 }

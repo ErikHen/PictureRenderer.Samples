@@ -3,7 +3,7 @@
 *@
 
 
-@*@using PictureRenderer.Optimizely*@
+@using PictureRenderer.Optimizely
 @using EPiServer.Web.Mvc.Html
 @using OptimizelyCMS_empty.Models
 @model OptimizelyCMS_empty.Models.Pages.StandardPage
@@ -33,25 +33,25 @@
     <body>
         @await Html.RenderEPiServerQuickNavigatorAsync()
         Hello Pictures!
-        @*<table>
+        <table>
             <tr>
                 <td>
-                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage)
+                    @Html.Picture(Model.TestImage1, PictureProfiles.SampleImage)
                 </td>
                 <td>
-                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.SampleImage).ToString())</pre>
+                    <pre>@FormatElement(Html.Picture(Model.TestImage1, PictureProfiles.SampleImage).ToString())</pre>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    @Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail)
+                    @Html.Picture(Model.TestImage1, PictureProfiles.Thumbnail)
                 </td>
                 <td>
-                    <pre>@FormatElement(Html.Picture(Model.CurrentPage.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
+                    <pre>@FormatElement(Html.Picture(Model.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
                 </td>
             </tr>
-        </table>*@
+        </table>
 
     @*@{Html.RenderXhtmlString(Model.CurrentPage.SomeRichText.AddResize());}*@
     

@@ -4,6 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="_Database\**" />
+    <Content Remove="_Database\**" />
+    <EmbeddedResource Remove="_Database\**" />
+    <None Remove="_Database\**" />
+  </ItemGroup>
+
 	<ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>

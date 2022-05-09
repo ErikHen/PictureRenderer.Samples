@@ -10,10 +10,10 @@ namespace OptimizelyCMS_empty.Models.Media
     public class ImageFile : ImageData
     {
         [Display(Name = "Alt text", Order = 10)]
-        public virtual string AltText { get; set; }
+        public virtual string? AltText { get; set; }
 
        // [UIHint(ImagePoint.UIHint)]
         [Display(Name = "Focal point")]
-        public virtual string ImageFocalPoint { get; set; }
+        public virtual string? ImageFocalPoint { get; set; }
     }
 }

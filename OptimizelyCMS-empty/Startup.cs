@@ -24,7 +24,6 @@ namespace OptimizelyCMS_empty
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddBaaijteOptimizelyImageSharp();
 
             if (_webHostingEnvironment.IsDevelopment())
             {
@@ -39,7 +38,10 @@ namespace OptimizelyCMS_empty
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
 
-            
+            services.AddBaaijteOptimizelyImageSharp();
+
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,13 +51,15 @@ namespace OptimizelyCMS_empty
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseBaaijteOptimizelyImageSharp();
 
 
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseBaaijteOptimizelyImageSharp();
+
 
             app.UseEndpoints(endpoints =>
             {

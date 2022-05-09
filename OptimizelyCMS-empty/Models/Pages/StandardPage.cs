@@ -11,14 +11,14 @@ namespace OptimizelyCMS_empty.Models.Pages
     {
         [CultureSpecific]
         [Display(Name = "Title", GroupName = SystemTabNames.Content, Order = 1)]
-        public virtual string Title { get; set; }
+        public virtual string? Title { get; set; }
 
         [Display(GroupName = SystemTabNames.Content, Order = 2)]
         [UIHint(UIHint.Image)]
-        public virtual ContentReference TestImage1 { get; set; }
+        public virtual ContentReference? TestImage1 { get; set; }
 
         [CultureSpecific]
         [Display(Name = "Main body", GroupName = SystemTabNames.Content, Order = 20)]
-        public virtual XhtmlString MainBody { get; set; }
+        public virtual XhtmlString? MainBody { get; set; }
     }
 }

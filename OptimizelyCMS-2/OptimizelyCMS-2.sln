@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptimizelyCMS-2", "OptimizelyCMS-2.csproj", "{90D00285-D3C9-43A3-9943-98CEA265D939}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Baaijte.Optimizely.ImageSharp.Web", "..\..\..\Baaijte.Optimizely.ImageSharp.Web\src\Baaijte.Optimizely.ImageSharp.Web\Baaijte.Optimizely.ImageSharp.Web.csproj", "{CC84FFF2-A911-4086-BCCA-15C1B6141682}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{90D00285-D3C9-43A3-9943-98CEA265D939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90D00285-D3C9-43A3-9943-98CEA265D939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90D00285-D3C9-43A3-9943-98CEA265D939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC84FFF2-A911-4086-BCCA-15C1B6141682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC84FFF2-A911-4086-BCCA-15C1B6141682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC84FFF2-A911-4086-BCCA-15C1B6141682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC84FFF2-A911-4086-BCCA-15C1B6141682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

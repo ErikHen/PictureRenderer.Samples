@@ -11,7 +11,7 @@ namespace GenericWebApp
         // Up to 1200 pixels viewport width, the picture width will be 320 pixels.
         // On larger viewport width, the picture width will be 750 pixels.
         // Note that picture width is not the same as image width (but it can be, on screens with a "device pixel ratio" of 1).
-        public static ImageSharpProfile SampleImage = new()
+        public static readonly ImageSharpProfile SampleImage = new()
         {
             SrcSetWidths = new[] { 320, 640, 750, 1500 },
             Sizes = new[] { "(max-width: 640px) 100vw", "(max-width: 1200px) 320px", "750px" },
@@ -34,6 +34,14 @@ namespace GenericWebApp
             SrcSetWidths = new[] { 150, 300 },
             Sizes = new[] { "150px" },
             AspectRatio = 1  //square image (equal height and width).
+        };
+
+        // Multi-image
+        // Show different images depending on media conditions (e.g. different image for mobile sized screen).
+        public static readonly ImageSharpProfile SampleImage2 = new()
+        {
+            MultiImageMediaConditions = new[] { new MediaCondition("(min-width: 1200px)", 600), new MediaCondition("(max-width: 1200px)", 300) },
+            AspectRatio = 1.777
         };
     }
 }

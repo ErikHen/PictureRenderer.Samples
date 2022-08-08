@@ -1,4 +1,5 @@
 ﻿using PictureRenderer.Optimizely;
+using PictureRenderer.Profiles;
 
 namespace OptimizelyCMS_empty.Models
 {
@@ -34,6 +35,17 @@ namespace OptimizelyCMS_empty.Models
             SrcSetWidths = new[] { 150, 300 },
             Sizes = new[] { "150px" },
             AspectRatio = 1  //square image (equal height and width).
+        };
+
+        // Multi-image
+        // Show different images depending on media conditions (e.g. different image for mobile sized screen).
+        public static readonly PictureProfile MultiImageSample = new()
+        {
+            // First image will be resized to 600px width, and will be shown when viewport width is greater than 600px.
+            // Second image will be resized to 300px width, and will be shown when viewport width is less than 600px.
+            // Note: if second image isn't available, the first image will be used instead.
+            MultiImageMediaConditions = new[] { new MediaCondition("(min-width: 600px)", 600), new MediaCondition("(max-width: 600px)", 300) },
+            AspectRatio = 1.777
         };
     }
 }

@@ -10,4 +10,6 @@
     @Html.Raw(Picture.Render("/test.jpg", PictureProfiles.Thumbnail))
     <br/>
     @Html.Raw(Picture.Render("/test.jpg?quality=70", PictureProfiles.SampleImage, "alt text", LazyLoading.Browser, focalPoint: (0.3, 0.4)))
+    <br/>
+    @Html.Raw(Picture.Render(new []{"/man.png", "/test.jpg"}, PictureProfiles.SampleImage2, focalPoints: new [] {(0.8, 0.3), (0.1, 0.1)}))
 </div>

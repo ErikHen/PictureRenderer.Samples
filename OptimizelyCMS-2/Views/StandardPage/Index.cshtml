@@ -38,6 +38,15 @@
                     <pre>@FormatElement(Html.Picture(Model.TestImage1, PictureProfiles.Thumbnail).ToString())</pre>
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    @Html.Picture(new [] { Model.TestImage1, Model.TestImage2 }, PictureProfiles.MultiImageSample)
+                </td>
+                <td>
+                    <pre>@FormatElement(Html.Picture(new [] { Model.TestImage1, Model.TestImage2 }, PictureProfiles.MultiImageSample).ToString())</pre>
+                </td>
+            </tr>
         </table>
     
     @*<img src="@Url.ContentUrl(Model.TestImage1)"/>*@
@@ -54,7 +63,8 @@
     string FormatElement(string element)
     {
         return element
-            .Replace("<picture>", "<picture>\n")
+           // .Replace("<picture>", "<picture>\n")
+            .Replace("<source", "\n<source")
             .Replace("</picture>", "\n</picture>")
             .Replace("srcset=\"", "srcset=\"\n ")
             .Replace(", /", ",\n /")

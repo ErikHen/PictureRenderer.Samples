@@ -17,6 +17,10 @@ namespace OptimizelyCMS_empty.Models.Pages
         [UIHint(UIHint.Image)]
         public virtual ContentReference? TestImage1 { get; set; }
 
+        [Display(GroupName = SystemTabNames.Content, Order = 5)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference? TestImage2 { get; set; }
+
         [CultureSpecific]
         [Display(Name = "Main body", GroupName = SystemTabNames.Content, Order = 20)]
         public virtual XhtmlString? MainBody { get; set; }

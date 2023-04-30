@@ -13,6 +13,7 @@ namespace GenericWebApp
         // Note that picture width is not the same as image width (but it can be, on screens with a "device pixel ratio" of 1).
         public static readonly ImageSharpProfile SampleImage = new()
         {
+            ShowInfo = true,
             SrcSetWidths = new[] { 320, 640, 750, 1500 },
             Sizes = new[] { "(max-width: 640px) 100vw", "(max-width: 1200px) 320px", "750px" },
             AspectRatio = 1.777 // 16:9 = 16/9 = 1.777
@@ -31,6 +32,7 @@ namespace GenericWebApp
         // Thumbnail is always 150px wide. But the browser may still select the 300px image for a high resolution screen (e.g. mobile or tablet screens).
         public static readonly ImageSharpProfile Thumbnail = new()
         {
+            ShowInfo = true,
             SrcSetWidths = new[] { 150, 300 },
             Sizes = new[] { "150px" },
             AspectRatio = 1  //square image (equal height and width).
@@ -40,6 +42,7 @@ namespace GenericWebApp
         // Show different images depending on media conditions (e.g. different image for mobile sized screen).
         public static readonly ImageSharpProfile SampleImage2 = new()
         {
+            ShowInfo = true,
             MultiImageMediaConditions = new[] { new MediaCondition("(min-width: 1200px)", 600), new MediaCondition("(max-width: 1200px)", 300) },
             AspectRatio = 1.777
         };
